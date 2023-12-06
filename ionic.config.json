@@ -1,0 +1,7 @@
+{
+  "name": "hicsspandemic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
