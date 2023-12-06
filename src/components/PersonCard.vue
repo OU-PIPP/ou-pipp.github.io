@@ -1,16 +1,15 @@
 <template>
 
-    <ion-col size="12" size-sm class="speaker">
+    <h1 style="color:red;" v-if="!person">Person is null</h1>
+
+    <ion-col v-if="person" size="12" size-sm class="speaker">
         <img class="img" :alt="person.name" :src="pic" />
 
         <h1 class="name">{{ person.name }}</h1>
+        <h3 v-if="role">{{ role }}</h3>
 
-        <ul class="info">
-            <li>Professor, FRS, FNAI, FSNAS, FAPS, FMRS, FWIF, FAAIA, AAPAM</li>
-            <li>Director, Center for Quantum Research and Technology (CQRT)</li>
-            <li>Founding Director, Center of Optimal Materials for Emerging Technologies (COMET)</li>
-            <li>Departments of Physics and ECE</li>
-            <li>University of Oklahoma</li>
+        <ul class="info" v-if="person.affiliations">
+            <li v-for="l in person.affiliations" :key="l">{{ l }}</li>
         </ul>
     </ion-col>
 
@@ -38,7 +37,8 @@ export default defineComponent({
   setup(props) {
 
     // const pic = props?.person?.pic ? new URL(`../public/assets/${props.person.pic}`, import.meta.url) : new URL("/public/assets/tbd.jpg", import.meta.url);
-    const pic = props?.person?.pic ? `/public/assets/${props.person.pic}` : 'public/assets/tbd.jpg';
+    // const pic = props?.person?.pic ? `/public/assets/${props.person.pic}` : 'public/assets/tbd.jpg';
+    const pic = new URL("/public/assets/tbd.jpg", import.meta.url);
 
     return {
       props,
@@ -58,7 +58,7 @@ export default defineComponent({
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100px;
 }
 
 .speaker .name {
