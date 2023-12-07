@@ -58,7 +58,9 @@ export default defineComponent({
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
   width: 100px;
+  box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2)
 }
 
 .speaker .name {
