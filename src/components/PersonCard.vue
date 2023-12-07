@@ -21,8 +21,8 @@ import { IonCol } from '@ionic/vue'
 
 export interface Person {
     name: string;
-    pic: string;
-    affiliations: string[];
+    pic?: string;
+    affiliations?: string[];
 }
 
 export default defineComponent({
@@ -31,14 +31,14 @@ export default defineComponent({
     IonCol
   },
   props: {
-    person: Object as PropType<Person>,
+    person: Object,
     role: String
   },
   setup(props) {
 
     // const pic = props?.person?.pic ? new URL(`@/${props.person.pic}`, import.meta.url) : new URL("/public/assets/tbd.jpg", import.meta.url);
     // const pic = props?.person?.pic ? `/public/assets/${props.person.pic}` : 'public/assets/tbd.jpg';
-    const pic = props.person.pic ? `/assets/${props.person.pic}` : "/assets/tbd.jpg";
+    const pic = props?.person?.pic ? `/assets/${props.person.pic}` : "/assets/tbd.jpg";
 
     return {
       props,
