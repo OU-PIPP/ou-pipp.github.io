@@ -36,7 +36,7 @@ export default defineComponent({
   },
   setup(props) {
 
-    // const pic = props?.person?.pic ? new URL(`../public/assets/${props.person.pic}`, import.meta.url) : new URL("/public/assets/tbd.jpg", import.meta.url);
+    // const pic = props?.person?.pic ? new URL(`@/${props.person.pic}`, import.meta.url) : new URL("/public/assets/tbd.jpg", import.meta.url);
     // const pic = props?.person?.pic ? `/public/assets/${props.person.pic}` : 'public/assets/tbd.jpg';
     const pic = new URL("/public/assets/tbd.jpg", import.meta.url);
 

@@ -24,7 +24,7 @@
             </ion-button>
           </ion-buttons>
 
-          <ion-title class="title" @click="scrollToTop()">Predictive Intelligence for Pandemic Prevention</ion-title>
+          <ion-title class="title" @click="scrollToTop()">Predictive Intelligence for Pandemic Prevention (PIPP)</ion-title>
 
           <ion-buttons slot="primary" v-if="screen.width >= breakpoint">
             <template v-for="n in navs" :key="n.goto">
@@ -70,6 +70,24 @@
 
                 </ion-row>
               </ion-grid>
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card id="dashboard">
+            <ion-card-header>
+              <ion-card-title>
+                PIPP Dashboard
+              </ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content class="vcc">
+            <div style="text-align:center">
+              <a href="https://pipp.disc.ourcloud.ou.edu/">
+                <img style="width:80%;" :src="require('@/dashboard.png')" />
+              </a>
+            </div>
+
+              <p>Description TBD</p>
             </ion-card-content>
           </ion-card>
 
@@ -253,19 +271,43 @@
           <ion-card id="workshops">
             <ion-card-header>
               <ion-card-title>
-                Publications
+                Workshops
               </ion-card-title>
             </ion-card-header>
 
             <ion-card-content class="vcc">
               <ul>
                 <li><h2><a href="https://vis4pandemres.github.io/">IEEE VIS Workshop on Visualization for Pandemic and Emergency Responses 2023 (Vis4PandEmRes)</a></h2>
-                  <p>Half-day workshop at IEEE VIS, Melbourne, Australia, 22-27 October Workshop date: October 22, 2023</p>
+                  <p>Half-day workshop at <a href="https://ieeevis.org/year/2023/welcome">IEEE VIS</a>, Melbourne, Australia, 22-27 October Workshop date: October 22, 2023</p>
                 </li>
                 
-                <li><h2><a href="https://vis4pandemres.github.io/">Symposium on Novel Data, Analytics, Predictive Intelligence, and Decision-Making for Pandemics and Emerging Diseases</a></h2>
-                  <p></p>
+                <li><h2><a href="https://hicsspandemic.github.io/">Symposium on Novel Data, Analytics, Predictive Intelligence, and Decision-Making for Pandemics and Emerging Diseases</a></h2>
+                  <p><a href="https://hicss.hawaii.edu/">Hawaii International Conference on System Sciences (HICSS)</a> Jan 3, 2024 - Jan 6, 2024, Hawaiian Village, Waikiki, Hawaii, USA</p>
                 </li>
+                
+              </ul>
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card id="lectures">
+            <ion-card-header>
+              <ion-card-title>
+                PIPP Lectures Series
+              </ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content class="vcc">
+              <ul>
+                <li>10/26/2022, Michael Wimberly, Frontiers of Data Science for Predicting Emerging Diseases</li>
+                <li>11/08/2022, Aaron Wendelboe, The Macroscope Meets the Microscope: Integrating Earth Science Data with Disease Surveillance for Outbreak Forecasting</li>
+                <li>12/13/2022, Anni Yang, Leveraging Host Movement with Disease Risk: Uncover the Underlying Mechanism of Disease Transmissions in Ecosystem</li>
+                <li>02/14/2023, Ashok Srinivasan, Linking Simulations and Emerging Data Sources to Analyze Infection Risk in Crowded Locations</li>
+                <li>03/07/2023, Zhunan Jia, Breathomics: The metabolomics study of exhaled air</li>
+                <li>07/18/2023, Sungahn Ko, Visualization Meets AI for Exploring and Forecasting Spatiotemporal Data</li>
+                <li>08/22/2023, Min Chen, RAMPVIS: Answering visualization challenges during the COVID-19 pandemic response</li>
+                
+                
+                
                 
               </ul>
             </ion-card-content>
@@ -314,7 +356,7 @@ export default defineComponent({
   setup() {
     const { t } = useI18n();
     const screen = useScreen();
-    const breakpoint = 1400;
+    const breakpoint = 3400;
 
     const content = ref();
     const scrollToEl = (id: string) => {
@@ -365,7 +407,19 @@ export default defineComponent({
       {
         text: 'Novel Technologies',
         goto: 'novel-technologies'
-      }
+      },
+      {
+        text: 'Publications',
+        goto: 'publications'
+      },
+      {
+        text: 'Workshops',
+        goto: 'workshops'
+      },
+      {
+        text: 'Lecture Series',
+        goto: 'lectures'
+      },
     ]);
 
     const persons = {
@@ -488,5 +542,10 @@ export default defineComponent({
 .speaker .info li {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+ion-toolbar {
+  --background: #841617;
+  --color: white;
 }
 </style>
