@@ -238,10 +238,10 @@
                   <PersonCard :person="persons.wj" role='Coordination' />
                   <PersonCard :person="persons.de" />
                   <PersonCard :person="persons.ks" />
-                  <PersonCard :person="persons.bs" />
                 </ion-row>
 
                 <ion-row class="ion-justify-content-center">
+                  <PersonCard :person="persons.bs" />
                   <PersonCard :person="persons.dh" />
                   <PersonCard :person="persons.tv" />
                   <PersonCard :person="persons.kd" />
