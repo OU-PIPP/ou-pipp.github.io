@@ -277,11 +277,18 @@
 
             <ion-card-content class="vcc">
               <ul>
-                <li><h2><a href="https://vis4pandemres.github.io/">IEEE VIS Workshop on Visualization for Pandemic and Emergency Responses 2023 (Vis4PandEmRes)</a></h2>
+                <li>
+                  <h2><a href="https://vis4pandemres.github.io/">IEEE VIS Workshop on Visualization for Pandemic and Emergency Responses 2023 (Vis4PandEmRes)</a></h2>
                   <p>Half-day workshop at <a href="https://ieeevis.org/year/2023/welcome">IEEE VIS</a>, Melbourne, Australia, 22-27 October Workshop date: October 22, 2023</p>
                 </li>
+
+                <li>
+                  <h2>OU Predictive Intelligence for Pandemic Prevention Phase I Workshop</h2>
+                  <p>Full-day workshop at Oklahoma University, November 8, 2023</p>
+                </li>
                 
-                <li><h2><a href="https://hicsspandemic.github.io/">Symposium on Novel Data, Analytics, Predictive Intelligence, and Decision-Making for Pandemics and Emerging Diseases</a></h2>
+                <li>
+                  <h2><a href="https://hicsspandemic.github.io/">Symposium on Novel Data, Analytics, Predictive Intelligence, and Decision-Making for Pandemics and Emerging Diseases</a></h2>
                   <p><a href="https://hicss.hawaii.edu/">Hawaii International Conference on System Sciences (HICSS)</a> Jan 3, 2024 - Jan 6, 2024, Hawaiian Village, Waikiki, Hawaii, USA</p>
                 </li>
                 
