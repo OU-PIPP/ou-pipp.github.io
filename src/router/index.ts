@@ -1,5 +1,3 @@
-// import ImprintPage from '@/views/ImprintPage.vue';
-// import GdprPage from '@/views/GdprPage.vue';
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import HomePage from '../views/HomePage.vue'
@@ -10,20 +8,10 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Home',
     component: HomePage
   },
-  // {
-  //   path: '/imprint',
-  //   name: 'Imprint',
-  //   component: ImprintPage
-  // },
-  // {
-  //   path: '/gdpr',
-  //   name: 'Privacy Policy',
-  //   component: GdprPage
-  // }
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 

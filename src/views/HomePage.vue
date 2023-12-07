@@ -30,7 +30,7 @@
             <template v-for="n in navs" :key="n.goto">
               <ion-button @click="scrollToEl(n.goto)">
                 {{ n.text }}
-                <ion-icon slot="start" :icon="n.icon"></ion-icon>
+                <!-- <ion-icon slot="start" :icon="n.icon"></ion-icon> -->
               </ion-button>
             </template>
           </ion-buttons>
@@ -60,7 +60,7 @@
               </p>
 
               <ion-grid>
-                <ion-row>
+                <ion-row class="ion-justify-content-center">
 
                   <PersonCard :person="persons.de" role='PI' />
                   <PersonCard :person="persons.tv" role='Co-PI' />
@@ -83,7 +83,7 @@
             <ion-card-content class="vcc">
             <div style="text-align:center">
               <a href="https://pipp.disc.ourcloud.ou.edu/">
-                <img style="width:80%;" :src="require('@/dashboard.png')" />
+                <img style="width:80%;" :src="'/assets/dashboard.png'" />
               </a>
             </div>
 
@@ -105,7 +105,7 @@
               </p>
 
               <ion-grid>
-                <ion-row>
+                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.mw" role='Team Lead / Co-PI' />
                   <PersonCard :person="persons.wj" role='Coordination' />
                   <PersonCard :person="persons.ay" />
@@ -131,7 +131,7 @@
               </p>
 
               <ion-grid>
-                <ion-row>
+                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.jv" role='Team Lead / Co-PI' />
                   <PersonCard :person="persons.wj" role='Coordination' />
                   <PersonCard :person="persons.ab" />
@@ -139,7 +139,7 @@
                   <PersonCard :person="persons.jr" />
                 </ion-row>
 
-                <ion-row>
+                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.ks" />
                   <PersonCard :person="persons.kb" />
                   <PersonCard :person="persons.rz" />
@@ -147,7 +147,7 @@
                   <PersonCard :person="persons.gs" />
                 </ion-row>
 
-                <ion-row>
+                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.gm" />
                 </ion-row>
               </ion-grid>
@@ -167,7 +167,7 @@
               </p>
 
               <ion-grid>
-                <ion-row>
+                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.aw" role='Team Lead / Co-PI' />
                   <PersonCard :person="persons.wj" role='Coordination' />
                   <PersonCard :person="persons.ab" />
@@ -175,7 +175,7 @@
                   <PersonCard :person="persons.dk" />
                 </ion-row>
 
-                <ion-row>
+                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.ew" />
                   <PersonCard :person="persons.kk" />
                   <PersonCard :person="persons.tv" />
@@ -199,7 +199,7 @@
               </p>
 
               <ion-grid>
-                <ion-row>
+                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.de" role='Team Lead / PI' />
                   <PersonCard :person="persons.wj" role='Coordination' />
                   <PersonCard :person="persons.aw" />
@@ -207,7 +207,7 @@
                   <PersonCard :person="persons.kk" />
                 </ion-row>
 
-                <ion-row>
+                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.ab" />
                   <PersonCard :person="persons.lc" />
                   <PersonCard :person="persons.cn" />
@@ -232,7 +232,7 @@
               </p>
 
               <ion-grid>
-                <ion-row>
+                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.vt" role='Team Lead / Co-PI' />
                   <PersonCard :person="persons.jv" role='Team Lead / Co-PI' />
                   <PersonCard :person="persons.wj" role='Coordination' />
@@ -241,7 +241,7 @@
                   <PersonCard :person="persons.bs" />
                 </ion-row>
 
-                <ion-row>
+                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.dh" />
                   <PersonCard :person="persons.tv" />
                   <PersonCard :person="persons.kd" />
@@ -324,161 +324,111 @@
   </ion-page>
 </template>
 
-<script lang="ts">
-// import LanguageSwitcher from '@/components/LanguageSwitcher.vue';
+<script setup lang="ts">
 import { IonGrid, IonRow, IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonContent, IonHeader, IonIcon, IonItem, IonList, IonMenu, IonPage, IonTitle, IonToolbar, menuController } from '@ionic/vue';
-import { chevronUp, airplane, train, bus, boat, location, car, bed, help, menu, call } from 'ionicons/icons';
-import { defineComponent, ref } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { useScreen } from 'vue-screen'
+import { chevronUp, menu } from 'ionicons/icons';
+import { useScreen } from 'vue-screen';
+import { ref } from 'vue';
 import PersonCard from '@/components/PersonCard.vue'
 
-export default defineComponent({
-  name: 'HomePage',
-  components: {
-    IonHeader,
-    IonPage,
-    IonTitle,
-    IonToolbar,
-    IonCard,
-    IonCardContent, IonCardHeader, IonCardTitle, IonIcon,
-    IonButton,
-    IonContent,
-    IonGrid,
-    IonRow,
-    IonButtons,
-    IonItem,
-    IonMenu,
-    IonList,
-    PersonCard
-    // LanguageSwitcher
-  },
-  setup() {
-    const { t } = useI18n();
-    const screen = useScreen();
-    const breakpoint = 3400;
+const screen = useScreen();
 
-    const content = ref();
-    const scrollToEl = (id: string) => {
-      const titleELe = document.getElementById(id);
-      if (!titleELe) {
-        return;
-      }
-      menuController.close('nav');
-      content.value.$el.scrollToPoint(0, titleELe.offsetTop, 1000);
-    };
+const breakpoint = 3400;
 
-    const scrollToTop = () => {
-      content.value.$el.scrollToTop(1000);
-    }
-
-    const showScrollTop = ref(false);
-
-    const getScrollPos = (pos: number) => {
-      showScrollTop.value = pos > 100;
-    };
-
-    menuController.enable(true, 'nav');
-    const openMenu = () => {
-      menuController.open('nav');
-    }
-
-    const navs = ref([
-      {
-        text: 'Overview',
-        goto: 'overview'
-      },
-      {
-        text: 'Environmental Surveillance',
-        goto: 'environment'
-      },
-      {
-        text: 'Animal Surveillance',
-        goto: 'animals'
-      },
-      {
-        text: 'Human Surveillance',
-        goto: 'humans'
-      },
-      {
-        text: 'Multiscale Descision-Making and Analytics',
-        goto: 'analytics'
-      },
-      {
-        text: 'Novel Technologies',
-        goto: 'novel-technologies'
-      },
-      {
-        text: 'Publications',
-        goto: 'publications'
-      },
-      {
-        text: 'Workshops',
-        goto: 'workshops'
-      },
-      {
-        text: 'Lecture Series',
-        goto: 'lectures'
-      },
-    ]);
-
-    const persons = {
-      de: {name: 'David Ebert', pic: 'de.jpg', affiliations: ['Director, Center for Quantum Research and Technology (CQRT)', 'Founding Director, Center of Optimal Materials for Emerging Technologies (COMET)', 'Departments of Physics and ECE', 'University of Oklahoma']},
-      tv: {name: 'Thirumalai Venkatesan', pic: 'de.jpg', affiliations: ['Professor, FRS, FNAI, FSNAS, FAPS, FMRS, FWIF, FAAIA, AAPAM', 'Director, Center for Quantum Research and Technology (CQRT)', 'Founding Director, Center of Optimal Materials for Emerging Technologies (COMET)', 'Departments of Physics and ECE', 'University of Oklahoma']},
-      jv: {name: 'Jason Vogel', pic: 'jv.jpg', affiliations: ['Professor, Civil Engineering and Environmental Science', 'Director, Oklahoma Water Survey', 'Associate Director, Water Technologies for Emerging Regions (WaTER) Center', 'University of Oklahoma']},
-      aw: {name: 'Aaron Wendelboe', pic: 'aw.jpg', affiliations: ['Professor, Epidemiology', 'Edward E. and Helen T. Bartlett Chair in Public Health', 'Williams Companies Foundation Presidential Professor', 'Department of Biostatistics and Epidemiology', 'The University of Oklahoma Health Sciences Center']},
-      mw: {name: 'Michael Wimberly', pic: 'mw.jpg', affiliations: []},
-      ay: {name: 'Anni Yang', pic: 'ay.jpg', affiliations: []},
-      rz: {name: 'Richard Zamor', pic: 'rz.jpg', affiliations: []},
-      bs: {name: 'Bradley Stevenson', pic: 'bs.jpg', affiliations: []},
-      ks: {name: 'Kristen Shelton', pic: 'ks.jpg', affiliations: []},
-      wj: {name: 'Wolfgang Jentner', pic: 'wj.jpg', affiliations: ['Research Scientist', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
-      ab: {name: 'Aseel Basheer', pic: 'ab.jpg', affiliations: ['Research Associate & PhD Student', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
-      jr: {name: 'Juergen Richt', pic: 'jr.jpg', affiliations: []},
-      kb: {name: 'Kyle Bohanan', pic: 'jr.jpg', affiliations: []},
-      gs: {name: 'Gilson Sanchez', pic: 'gs.jpg', affiliations: []},
-      gm: {name: 'George Moore', pic: 'gs.jpg', affiliations: []},
-      lg: {name: 'Lawrence Glickman', pic: 'gs.jpg', affiliations: []},
-      kc: {name: 'Karinne Cortes', pic: 'gs.jpg', affiliations: []},
-      tm: {name: 'Tracy McNara', pic: 'gs.jpg', affiliations: []},
-      gr: {name: 'Grace Rogers', pic: 'gs.jpg', affiliations: []},
-      dk: {name: 'David Kendrick', pic: 'gs.jpg', affiliations: []},
-      ew: {name: 'Eddie Withers', pic: 'gs.jpg', affiliations: []},
-      kk: {name: 'Katrin Kuhn', pic: 'gs.jpg', affiliations: []},
-      vt: {name: 'Velmurugan Thavasi', pic: 'gs.jpg', affiliations: []},
-      cn: {name: 'Charles Nicholson', pic: 'gs.jpg', affiliations: []},
-      lc: {name: 'Lan Chao', pic: 'gs.jpg', affiliations: []},
-      dh: {name: 'Dean Hougen', pic: 'gs.jpg', affiliations: []},
-      tr: {name: 'Talayeh Razzaghi', pic: 'gs.jpg', affiliations: []},
-      kd: {name: 'Kara Deleon', pic: 'gs.jpg', affiliations: []},
-    };
-
-    return {
-      t,
-      airplane,
-      train,
-      bus,
-      boat,
-      location,
-      car,
-      bed,
-      content,
-      scrollToEl,
-      scrollToTop,
-      chevronUp,
-      getScrollPos,
-      showScrollTop,
-      help,
-      openMenu,
-      menu,
-      navs,
-      screen,
-      breakpoint,
-      call,
-      persons
-    }
+const content = ref();
+const scrollToEl = (id: string) => {
+  const titleELe = document.getElementById(id);
+  if (!titleELe) {
+    return;
   }
-});
+  menuController.close('nav');
+  content.value.$el.scrollToPoint(0, titleELe.offsetTop, 1000);
+};
+
+const scrollToTop = () => {
+  content.value.$el.scrollToTop(1000);
+}
+
+const showScrollTop = ref(false);
+
+const getScrollPos = (pos: number) => {
+  showScrollTop.value = pos > 100;
+};
+
+menuController.enable(true, 'nav');
+const openMenu = () => {
+  menuController.open('nav');
+}
+
+const navs = ref([
+  {
+    text: 'Overview',
+    goto: 'overview'
+  },
+  {
+    text: 'Environmental Surveillance',
+    goto: 'environment'
+  },
+  {
+    text: 'Animal Surveillance',
+    goto: 'animals'
+  },
+  {
+    text: 'Human Surveillance',
+    goto: 'humans'
+  },
+  {
+    text: 'Multiscale Descision-Making and Analytics',
+    goto: 'analytics'
+  },
+  {
+    text: 'Novel Technologies',
+    goto: 'novel-technologies'
+  },
+  {
+    text: 'Publications',
+    goto: 'publications'
+  },
+  {
+    text: 'Workshops',
+    goto: 'workshops'
+  },
+  {
+    text: 'Lecture Series',
+    goto: 'lectures'
+  },
+]);
+
+const persons = {
+  de: {name: 'David Ebert', pic: 'de.jpg', affiliations: ['Director, Center for Quantum Research and Technology (CQRT)', 'Founding Director, Center of Optimal Materials for Emerging Technologies (COMET)', 'Departments of Physics and ECE', 'University of Oklahoma']},
+  tv: {name: 'Thirumalai Venkatesan', pic: 'tv.jpg', affiliations: ['Professor, FRS, FNAI, FSNAS, FAPS, FMRS, FWIF, FAAIA, AAPAM', 'Director, Center for Quantum Research and Technology (CQRT)', 'Founding Director, Center of Optimal Materials for Emerging Technologies (COMET)', 'Departments of Physics and ECE', 'University of Oklahoma']},
+  jv: {name: 'Jason Vogel', pic: 'jv.jpg', affiliations: ['Professor, Civil Engineering and Environmental Science', 'Director, Oklahoma Water Survey', 'Associate Director, Water Technologies for Emerging Regions (WaTER) Center', 'University of Oklahoma']},
+  aw: {name: 'Aaron Wendelboe', pic: 'aw.jpg', affiliations: ['Professor, Epidemiology', 'Edward E. and Helen T. Bartlett Chair in Public Health', 'Williams Companies Foundation Presidential Professor', 'Department of Biostatistics and Epidemiology', 'The University of Oklahoma Health Sciences Center']},
+  mw: {name: 'Michael Wimberly', pic: null, affiliations: []},
+  ay: {name: 'Anni Yang', pic: null, affiliations: []},
+  rz: {name: 'Richard Zamor', pic: null, affiliations: []},
+  bs: {name: 'Bradley Stevenson', pic: null, affiliations: []},
+  ks: {name: 'Kristen Shelton', pic: null, affiliations: []},
+  wj: {name: 'Wolfgang Jentner', pic: 'wj.jpg', affiliations: ['Research Scientist', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
+  ab: {name: 'Aseel Basheer', pic: null, affiliations: ['Research Associate & PhD Student', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
+  jr: {name: 'Juergen Richt', pic: null, affiliations: []},
+  kb: {name: 'Kyle Bohanan', pic: null, affiliations: []},
+  gs: {name: 'Gilson Sanchez', pic: null, affiliations: []},
+  gm: {name: 'George Moore', pic: null, affiliations: []},
+  lg: {name: 'Lawrence Glickman', pic: null, affiliations: []},
+  kc: {name: 'Karinne Cortes', pic: null, affiliations: []},
+  tm: {name: 'Tracy McNara', pic: null, affiliations: []},
+  gr: {name: 'Grace Rogers', pic: null, affiliations: []},
+  dk: {name: 'David Kendrick', pic: null, affiliations: []},
+  ew: {name: 'Eddie Withers', pic: null, affiliations: []},
+  kk: {name: 'Katrin Kuhn', pic: null, affiliations: []},
+  vt: {name: 'Velmurugan Thavasi', pic: null, affiliations: []},
+  cn: {name: 'Charles Nicholson', pic: null, affiliations: []},
+  lc: {name: 'Lan Chao', pic: null, affiliations: []},
+  dh: {name: 'Dean Hougen', pic: null, affiliations: []},
+  tr: {name: 'Talayeh Razzaghi', pic: null, affiliations: []},
+  kd: {name: 'Kara Deleon', pic: null, affiliations: []},
+};
 </script>
 
 <style scoped>

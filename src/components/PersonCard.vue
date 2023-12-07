@@ -2,7 +2,7 @@
 
     <h1 style="color:red;" v-if="!person">Person is null</h1>
 
-    <ion-col v-if="person" size="12" size-sm class="speaker">
+    <ion-col v-if="person" size="12" size-md="2" class="speaker">
         <img class="img" :alt="person.name" :src="pic" />
 
         <h1 class="name">{{ person.name }}</h1>
@@ -38,7 +38,7 @@ export default defineComponent({
 
     // const pic = props?.person?.pic ? new URL(`@/${props.person.pic}`, import.meta.url) : new URL("/public/assets/tbd.jpg", import.meta.url);
     // const pic = props?.person?.pic ? `/public/assets/${props.person.pic}` : 'public/assets/tbd.jpg';
-    const pic = new URL("/public/assets/tbd.jpg", import.meta.url);
+    const pic = props.person.pic ? `/assets/${props.person.pic}` : "/assets/tbd.jpg";
 
     return {
       props,
