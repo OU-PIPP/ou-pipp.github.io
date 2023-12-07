@@ -400,7 +400,7 @@ const navs = ref([
 ]);
 
 const persons = {
-  de: {name: 'David Ebert', pic: 'de.jpg', affiliations: ['Director, Center for Quantum Research and Technology (CQRT)', 'Founding Director, Center of Optimal Materials for Emerging Technologies (COMET)', 'Departments of Physics and ECE', 'University of Oklahoma']},
+  de: {name: 'David Ebert', pic: 'de.jpg', affiliations: ['Gallogly Chair Professor of ECE and CS', 'Associate Vice President of Research and Partnerships', 'Director, Data Institute for Societal Challenges (DISC)', 'University of Oklahoma']},
   tv: {name: 'Thirumalai Venkatesan', pic: 'tv.jpg', affiliations: ['Professor, FRS, FNAI, FSNAS, FAPS, FMRS, FWIF, FAAIA, AAPAM', 'Director, Center for Quantum Research and Technology (CQRT)', 'Founding Director, Center of Optimal Materials for Emerging Technologies (COMET)', 'Departments of Physics and ECE', 'University of Oklahoma']},
   jv: {name: 'Jason Vogel', pic: 'jv.jpg', affiliations: ['Professor, Civil Engineering and Environmental Science', 'Director, Oklahoma Water Survey', 'Associate Director, Water Technologies for Emerging Regions (WaTER) Center', 'University of Oklahoma']},
   aw: {name: 'Aaron Wendelboe', pic: 'aw.jpg', affiliations: ['Professor, Epidemiology', 'Edward E. and Helen T. Bartlett Chair in Public Health', 'Williams Companies Foundation Presidential Professor', 'Department of Biostatistics and Epidemiology', 'The University of Oklahoma Health Sciences Center']},
