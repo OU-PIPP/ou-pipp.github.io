@@ -417,7 +417,7 @@ const persons = {
   bs: {name: 'Bradley Stevenson', pic: null, affiliations: null},
   ks: {name: 'Kristen Shelton', pic: null, affiliations: null},
   wj: {name: 'Wolfgang Jentner', pic: 'wj.jpg', affiliations: ['Research Scientist', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
-  ab: {name: 'Aseel Basheer', pic: null, affiliations: ['Research Associate & PhD Student', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
+  ab: {name: 'Aseel Basheer', pic: null, affiliations: ['Research Assistant & PhD Candidate', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
   jr: {name: 'Juergen Richt', pic: null, affiliations: null},
   kb: {name: 'Kyle Bohanan', pic: null, affiliations: null},
   gs: {name: 'Gilson Sanchez', pic: null, affiliations: null},
