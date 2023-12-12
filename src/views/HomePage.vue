@@ -108,6 +108,7 @@
                 <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.mw" role='Team Lead / Co-PI' />
                   <PersonCard :person="persons.ks" />
+                  <PersonCard :person="persons.bs" />
                   <PersonCard :person="persons.jv" role='Co-PI' />
                 </ion-row>
                 <ion-row class="ion-justify-content-center">
@@ -200,6 +201,7 @@
                   <PersonCard :person="persons.tv" role='Team Co-Lead / Co-PI' />
                   <PersonCard :person="persons.jv" role='Team Co-Lead / Co-PI' />
                   <PersonCard :person="persons.de" role='PI' />
+                  <PersonCard :person="persons.kk" />
                   <PersonCard :person="persons.dh" />
                 </ion-row>
 
@@ -412,14 +414,14 @@ const persons = {
   aw: {name: 'Aaron Wendelboe', pic: 'aw.jpg', affiliations: ['Professor, Epidemiology', 'Edward E. and Helen T. Bartlett Chair in Public Health', 'Williams Companies Foundation Presidential Professor', 'Department of Biostatistics and Epidemiology', 'The University of Oklahoma Health Sciences Center']},
   mw: {name: 'Michael Wimberly', pic: 'mw.jpg', affiliations: ['Professor', 'Department of Geography and Environmental Sustainability', 'University of Oklahoma']},
   ay: {name: 'Anni Yang', pic: 'ay.jpg', affiliations: ['Assistant Professor', 'Department of Geography and Environmental Sustainability', 'University of Oklahoma']},
-  rz: {name: 'Richard Zamor', pic: null, affiliations: null},
+  rz: {name: 'Richard Zamor', pic: null, affiliations: ['Research Scientist', 'Oklahoma Water Survey', 'University of Oklahoma']},
   bs: {name: 'Bradley Stevenson', pic: 'bs.jpg', affiliations: ['Associate Professor, Microbiology', 'School of Biological Sciences', 'University of Oklahoma']},
-  ks: {name: 'Kristen Shelton', pic: null, affiliations: null},
+  ks: {name: 'Kristen Shelton', pic: null, affiliations: ['Research Scientist', 'Oklahoma Water Survey', 'University of Oklahoma']},
   wj: {name: 'Wolfgang Jentner', pic: 'wj.jpg', affiliations: ['Research Scientist', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
   ab: {name: 'Aseel Basheer', pic: null, affiliations: ['Research Assistant & PhD Candidate', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
   jr: {name: 'Juergen Richt', pic: 'jr.jpg', affiliations: ['Regents Distinguished Professor & KBA Eminent Scholar', 'College of Veterinary Medicine', 'Director, Center of Excellence for Emerging and Zoonotic Animal Diseases (CEEZAD)', 'Director, NIH COBRE Center on Emerging and Zoonotic Infectious Diseases (CEZID)', 'Kansas State University']},
   kb: {name: 'Kyle Bohanan', pic: null, affiliations: null},
-  gs: {name: 'Gilson Sanchez', pic: null, affiliations: null},
+  gs: {name: 'Gilson Sanchez', pic: null, affiliations: ['Postdoctoral Fellow', 'Oklahoma Water Survey', 'University of Oklahoma']},
   gm: {name: 'George Moore', pic: 'gm.jpg', affiliations: ['Professor, Epidemiology', 'Department of Veterinary Administration', 'Purdue University']},
   lg: {name: 'Lawrence Glickman', pic: null, affiliations: null},
   kc: {name: 'Karinne Cortes', pic: null, affiliations: null},
