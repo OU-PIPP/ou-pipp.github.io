@@ -24,7 +24,7 @@
             </ion-button>
           </ion-buttons>
 
-          <ion-title class="title" @click="scrollToTop()">Predictive Intelligence for Pandemic Prevention (PIPP)</ion-title>
+          <ion-title class="title" @click="scrollToTop()">Predictive Intelligence for Pandemic Prevention (PIPP) | Phase 1</ion-title>
 
           <ion-buttons slot="primary" v-if="screen.width >= breakpoint">
             <template v-for="n in navs" :key="n.goto">
@@ -107,12 +107,13 @@
               <ion-grid>
                 <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.mw" role='Team Lead / Co-PI' />
-                  <PersonCard :person="persons.wj" role='Coordination' />
+                  <PersonCard :person="persons.ks" />
+                  <PersonCard :person="persons.jv" role='Co-PI' />
+                </ion-row>
+                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.ay" />
                   <PersonCard :person="persons.rz" />
-                  <PersonCard :person="persons.ks" />
-
-
+                  <PersonCard :person="persons.wj" role='Coordination' />
                 </ion-row>
               </ion-grid>
             </ion-card-content>
@@ -132,23 +133,19 @@
 
               <ion-grid>
                 <ion-row class="ion-justify-content-center">
-                  <PersonCard :person="persons.jv" role='Team Lead / Co-PI' />
-                  <PersonCard :person="persons.wj" role='Coordination' />
+                  <PersonCard :person="persons.jr" role='Team Co-Lead' />
+                  <PersonCard :person="persons.jv" role='Team Co-Lead / Co-PI' />
                   <PersonCard :person="persons.ab" />
-                  <PersonCard :person="persons.ay" />
-                  <PersonCard :person="persons.jr" />
-                </ion-row>
-
-                <ion-row class="ion-justify-content-center">
-                  <PersonCard :person="persons.ks" />
-                  <PersonCard :person="persons.kb" />
-                  <PersonCard :person="persons.rz" />
                   <PersonCard :person="persons.de" />
-                  <PersonCard :person="persons.gs" />
+                  <PersonCard :person="persons.gm" />
                 </ion-row>
 
                 <ion-row class="ion-justify-content-center">
-                  <PersonCard :person="persons.gm" />
+                  <PersonCard :person="persons.gs" />
+                  <PersonCard :person="persons.ks" />
+                  <PersonCard :person="persons.ay" />
+                  <PersonCard :person="persons.rz" />
+                  <PersonCard :person="persons.wj" role='Coordination' />
                 </ion-row>
               </ion-grid>
             </ion-card-content>
@@ -169,17 +166,54 @@
               <ion-grid>
                 <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.aw" role='Team Lead / Co-PI' />
-                  <PersonCard :person="persons.wj" role='Coordination' />
                   <PersonCard :person="persons.ab" />
                   <PersonCard :person="persons.dk" />
+                  <PersonCard :person="persons.kk" />
                 </ion-row>
 
                 <ion-row class="ion-justify-content-center">
-                  <PersonCard :person="persons.kk" />
-                  <PersonCard :person="persons.tv" />
-                  <PersonCard :person="persons.vt" />
                   <PersonCard :person="persons.cn" />
+                  <PersonCard :person="persons.vt" />
+                  <PersonCard :person="persons.tv" role='Co-PI' />
+                  <PersonCard :person="persons.wj" role='Coordination' />
                 </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+
+          
+
+          <ion-card id="novel-technologies">
+            <ion-card-header>
+              <ion-card-title>
+                Novel Technologies: Breathomics &amp; Wastewater-based Epidemiology
+              </ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content class="vcc">
+              <p>
+                Description TBD
+              </p>
+
+              <ion-grid>
+                <ion-row class="ion-justify-content-center">
+                  <PersonCard :person="persons.tv" role='Team Co-Lead / Co-PI' />
+                  <PersonCard :person="persons.jv" role='Team Co-Lead / Co-PI' />
+                  <PersonCard :person="persons.de" role='PI' />
+                  <PersonCard :person="persons.dh" />
+                </ion-row>
+
+                <ion-row class="ion-justify-content-center">
+                  
+                  
+                  
+                  <PersonCard :person="persons.gs" />
+                  <PersonCard :person="persons.ks" />
+                  <PersonCard :person="persons.bs" />
+                  <PersonCard :person="persons.vt" />
+                  <PersonCard :person="persons.wj" role='Coordination' />
+                </ion-row>
+
               </ion-grid>
             </ion-card-content>
           </ion-card>
@@ -199,51 +233,18 @@
               <ion-grid>
                 <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.de" role='Team Lead / PI' />
-                  <PersonCard :person="persons.wj" role='Coordination' />
-                  <PersonCard :person="persons.aw" />
-                  <PersonCard :person="persons.mw" />
-                  <PersonCard :person="persons.kk" />
-                </ion-row>
-
-                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.ab" />
-                  <PersonCard :person="persons.lc" />
+                  <PersonCard :person="persons.dh" />
+                  <PersonCard :person="persons.kk" />
+                  <PersonCard :person="persons.cl" />
+                </ion-row>
+
+                <ion-row class="ion-justify-content-center">
                   <PersonCard :person="persons.cn" />
-                  <PersonCard :person="persons.dh" />
                   <PersonCard :person="persons.tr" />
-                </ion-row>
-
-              </ion-grid>
-            </ion-card-content>
-          </ion-card>
-
-          <ion-card id="novel-technologies">
-            <ion-card-header>
-              <ion-card-title>
-                Novel Technologies: Breathomics &amp; Wastewaters
-              </ion-card-title>
-            </ion-card-header>
-
-            <ion-card-content class="vcc">
-              <p>
-                Description TBD
-              </p>
-
-              <ion-grid>
-                <ion-row class="ion-justify-content-center">
-                  <PersonCard :person="persons.tv" role='Team Lead / Co-PI' />
-                  <PersonCard :person="persons.jv" role='Team Lead / Co-PI' />
+                  <PersonCard :person="persons.aw" role='Co-PI' />
+                  <PersonCard :person="persons.mw" />
                   <PersonCard :person="persons.wj" role='Coordination' />
-                  <PersonCard :person="persons.de" />
-                  <PersonCard :person="persons.ks" />
-                </ion-row>
-
-                <ion-row class="ion-justify-content-center">
-                  <PersonCard :person="persons.bs" />
-                  <PersonCard :person="persons.dh" />
-                  <PersonCard :person="persons.vt" />
-                  <PersonCard :person="persons.kd" />
-                  <PersonCard :person="persons.gs" />
                 </ion-row>
 
               </ion-grid>
@@ -260,8 +261,8 @@
 
             <ion-card-content class="vcc">
               <ol>
-                <li>David S Ebert and Aaron M Wendelboe (2023), "Applying data science advances in disease surveillance and control", Open Access Government July 2023, pp.152-153. doi: <a href="https://doi.org/10.56367/OAG-039-10899">10.56367/OAG-039-10899</a></li>
-                <li>Katrin Gaardbo Kuhn (2023), "Wastewater surveillance for infectious disease preparedness", Open Access Government October 2023, pp.22-23. doi: <a href="https://doi.org/10.56367/OAG-040-10923">10.56367/OAG-040-10923</a></li>
+                <li>David S. Ebert and Aaron M. Wendelboe (2023), "Applying data science advances in disease surveillance and control", Open Access Government July 2023, pp.152-153. doi: <a href="https://doi.org/10.56367/OAG-039-10899">10.56367/OAG-039-10899</a></li>
+                <li>Katrin G. Kuhn, Jason R. Vogel and Bradley S. Stevenson (2023), "Wastewater surveillance for infectious disease preparedness", Open Access Government October 2023, pp.22-23. doi: <a href="https://doi.org/10.56367/OAG-040-10923">10.56367/OAG-040-10923</a></li>
               </ol>
             </ion-card-content>
           </ion-card>
@@ -282,7 +283,7 @@
 
                 <li>
                   <h2>OU Predictive Intelligence for Pandemic Prevention Phase I Workshop</h2>
-                  <p>Full-day workshop at Oklahoma University, November 8, 2023</p>
+                  <p>Full-day workshop at the University of Oklahoma, November 8, 2023</p>
                 </li>
                 
                 <li>
@@ -383,12 +384,12 @@ const navs = ref([
     goto: 'humans'
   },
   {
-    text: 'Multiscale Descision-Making and Analytics',
-    goto: 'analytics'
+    text: 'Novel Technologies: Breathomics & Wastewater-based Epidemiology',
+    goto: 'novel-technologies'
   },
   {
-    text: 'Novel Technologies',
-    goto: 'novel-technologies'
+    text: 'Multiscale Descision-Making and Analytics',
+    goto: 'analytics'
   },
   {
     text: 'Publications',
@@ -412,14 +413,14 @@ const persons = {
   mw: {name: 'Michael Wimberly', pic: 'mw.jpg', affiliations: ['Professor', 'Department of Geography and Environmental Sustainability', 'University of Oklahoma']},
   ay: {name: 'Anni Yang', pic: 'ay.jpg', affiliations: ['Assistant Professor', 'Department of Geography and Environmental Sustainability', 'University of Oklahoma']},
   rz: {name: 'Richard Zamor', pic: null, affiliations: null},
-  bs: {name: 'Bradley Stevenson', pic: null, affiliations: null},
+  bs: {name: 'Bradley Stevenson', pic: 'bs.jpg', affiliations: ['Associate Professor, Microbiology', 'School of Biological Sciences', 'University of Oklahoma']},
   ks: {name: 'Kristen Shelton', pic: null, affiliations: null},
   wj: {name: 'Wolfgang Jentner', pic: 'wj.jpg', affiliations: ['Research Scientist', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
   ab: {name: 'Aseel Basheer', pic: null, affiliations: ['Research Assistant & PhD Candidate', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
-  jr: {name: 'Juergen Richt', pic: null, affiliations: null},
+  jr: {name: 'Juergen Richt', pic: 'jr.jpg', affiliations: ['Regents Distinguished Professor & KBA Eminent Scholar', 'College of Veterinary Medicine', 'Director, Center of Excellence for Emerging and Zoonotic Animal Diseases (CEEZAD)', 'Director, NIH COBRE Center on Emerging and Zoonotic Infectious Diseases (CEZID)', 'Kansas State University']},
   kb: {name: 'Kyle Bohanan', pic: null, affiliations: null},
   gs: {name: 'Gilson Sanchez', pic: null, affiliations: null},
-  gm: {name: 'George Moore', pic: null, affiliations: null},
+  gm: {name: 'George Moore', pic: 'gm.jpg', affiliations: ['Professor, Epidemiology', 'Department of Veterinary Administration', 'Purdue University']},
   lg: {name: 'Lawrence Glickman', pic: null, affiliations: null},
   kc: {name: 'Karinne Cortes', pic: null, affiliations: null},
   tm: {name: 'Tracy McNara', pic: null, affiliations: null},
@@ -429,9 +430,9 @@ const persons = {
   kk: {name: 'Katrin Kuhn', pic: 'kk.jpg', affiliations: ['Assistant Professor', 'Department of Biostatistics and Epidemiology', 'The University of Oklahoma Health Sciences Center']},
   vt: {name: 'Velmurugan Thavasi', pic: 'vt.jpg', affiliations: ['Managing Director', 'Center for Quantum Research and Technology (CQRT)', 'University of Oklahoma']},
   cn: {name: 'Charles Nicholson', pic: 'cn.jpg', affiliations: ['Associate Professor', 'Department of Industrial and Systems Engineering', 'Department of Data Science and Analytics', 'University of Oklahoma']},
-  lc: {name: 'Lan Chao', pic: null, affiliations: null},
+  cl: {name: 'Chao Lan', pic: 'cl.png', affiliations: ['Assistant Professor', 'School of Computer Science', 'University of Oklahoma']},
   dh: {name: 'Dean Hougen', pic: 'dh.png', affiliations: ['Associate Professor', 'Lloyd & Joyce Austin Presidential Professor', 'CS Interim Director', 'School of Computer Science', 'University of Oklahoma']},
-  tr: {name: 'Talayeh Razzaghi', pic: null, affiliations: null},
+  tr: {name: 'Talayeh Razzaghi', pic: 'tr.png', affiliations: ['Assistant Professor', 'School of Industrial and Systems Engineering', 'University of Oklahoma']},
   kd: {name: 'Kara Deleon', pic: null, affiliations: null},
 };
 </script>
