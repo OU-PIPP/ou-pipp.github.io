@@ -171,12 +171,10 @@
                   <PersonCard :person="persons.aw" role='Team Lead / Co-PI' />
                   <PersonCard :person="persons.wj" role='Coordination' />
                   <PersonCard :person="persons.ab" />
-                  <PersonCard :person="persons.gr" />
                   <PersonCard :person="persons.dk" />
                 </ion-row>
 
                 <ion-row class="ion-justify-content-center">
-                  <PersonCard :person="persons.ew" />
                   <PersonCard :person="persons.kk" />
                   <PersonCard :person="persons.tv" />
                   <PersonCard :person="persons.vt" />
@@ -411,8 +409,8 @@ const persons = {
   tv: {name: 'Thirumalai Venkatesan', pic: 'tv.jpg', affiliations: ['Professor, FRS, FNAI, FSNAS, FAPS, FMRS, FWIF, FAAIA, AAPAM', 'Director, Center for Quantum Research and Technology (CQRT)', 'Founding Director, Center of Optimal Materials for Emerging Technologies (COMET)', 'Departments of Physics and ECE', 'University of Oklahoma']},
   jv: {name: 'Jason Vogel', pic: 'jv.jpg', affiliations: ['Professor, Civil Engineering and Environmental Science', 'Director, Oklahoma Water Survey', 'Associate Director, Water Technologies for Emerging Regions (WaTER) Center', 'University of Oklahoma']},
   aw: {name: 'Aaron Wendelboe', pic: 'aw.jpg', affiliations: ['Professor, Epidemiology', 'Edward E. and Helen T. Bartlett Chair in Public Health', 'Williams Companies Foundation Presidential Professor', 'Department of Biostatistics and Epidemiology', 'The University of Oklahoma Health Sciences Center']},
-  mw: {name: 'Michael Wimberly', pic: 'mw.jpg', affiliations: null},
-  ay: {name: 'Anni Yang', pic: null, affiliations: null},
+  mw: {name: 'Michael Wimberly', pic: 'mw.jpg', affiliations: ['Professor', 'Department of Geography and Environmental Sustainability', 'University of Oklahoma']},
+  ay: {name: 'Anni Yang', pic: 'ay.jpg', affiliations: ['Assistant Professor', 'Department of Geography and Environmental Sustainability', 'University of Oklahoma']},
   rz: {name: 'Richard Zamor', pic: null, affiliations: null},
   bs: {name: 'Bradley Stevenson', pic: null, affiliations: null},
   ks: {name: 'Kristen Shelton', pic: null, affiliations: null},
@@ -429,10 +427,10 @@ const persons = {
   dk: {name: 'David Kendrick', pic: 'dk.jpg', affiliations: ['PI and CEO - MyHealth Access Network', 'Chair of the Board for the National Committee for Quality Assurance (NCQA)', 'Board member for Strategic Health Information Exchange Collaborative (SHIEC)', 'Chair, Department of Medical Informatics, University of Oklahoma']},
   ew: {name: 'Eddie Withers', pic: null, affiliations: null},
   kk: {name: 'Katrin Kuhn', pic: 'kk.jpg', affiliations: ['Assistant Professor', 'Department of Biostatistics and Epidemiology', 'The University of Oklahoma Health Sciences Center']},
-  vt: {name: 'Velmurugan Thavasi', pic: null, affiliations: null},
+  vt: {name: 'Velmurugan Thavasi', pic: 'vt.jpg', affiliations: ['Managing Director', 'Center for Quantum Research and Technology (CQRT)', 'University of Oklahoma']},
   cn: {name: 'Charles Nicholson', pic: 'cn.jpg', affiliations: ['Associate Professor', 'Department of Industrial and Systems Engineering', 'Department of Data Science and Analytics', 'University of Oklahoma']},
   lc: {name: 'Lan Chao', pic: null, affiliations: null},
-  dh: {name: 'Dean Hougen', pic: null, affiliations: null},
+  dh: {name: 'Dean Hougen', pic: 'dh.png', affiliations: ['Associate Professor', 'Lloyd & Joyce Austin Presidential Professor', 'CS Interim Director', 'School of Computer Science', 'University of Oklahoma']},
   tr: {name: 'Talayeh Razzaghi', pic: null, affiliations: null},
   kd: {name: 'Kara Deleon', pic: null, affiliations: null},
 };
