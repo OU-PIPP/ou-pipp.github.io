@@ -418,7 +418,7 @@ const persons = {
   bs: {name: 'Bradley Stevenson', pic: 'bs.jpg', affiliations: ['Associate Professor, Microbiology', 'School of Biological Sciences', 'University of Oklahoma']},
   ks: {name: 'Kristen Shelton', pic: null, affiliations: ['Research Scientist', 'Oklahoma Water Survey', 'University of Oklahoma']},
   wj: {name: 'Wolfgang Jentner', pic: 'wj.jpg', affiliations: ['Research Scientist', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
-  ab: {name: 'Aseel Basheer', pic: null, affiliations: ['Research Assistant & PhD Candidate', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
+  ab: {name: 'Aseel Basheer', pic: 'ab.jpg', affiliations: ['Research Assistant & PhD Candidate', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
   jr: {name: 'Juergen Richt', pic: 'jr.jpg', affiliations: ['Regents Distinguished Professor & KBA Eminent Scholar', 'College of Veterinary Medicine', 'Director, Center of Excellence for Emerging and Zoonotic Animal Diseases (CEEZAD)', 'Director, NIH COBRE Center on Emerging and Zoonotic Infectious Diseases (CEZID)', 'Kansas State University']},
   kb: {name: 'Kyle Bohanan', pic: null, affiliations: null},
   gs: {name: 'Gilson Sanchez', pic: null, affiliations: ['Postdoctoral Fellow', 'Oklahoma Water Survey', 'University of Oklahoma']},
