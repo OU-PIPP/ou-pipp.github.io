@@ -265,6 +265,7 @@
               <ol>
                 <li>David S. Ebert and Aaron M. Wendelboe (2023), "Applying data science advances in disease surveillance and control", Open Access Government July 2023, pp.152-153. doi: <a href="https://doi.org/10.56367/OAG-039-10899">10.56367/OAG-039-10899</a></li>
                 <li>Katrin G. Kuhn, Jason R. Vogel and Bradley S. Stevenson (2023), "Wastewater surveillance for infectious disease preparedness", Open Access Government October 2023, pp.22-23. doi: <a href="https://doi.org/10.56367/OAG-040-10923">10.56367/OAG-040-10923</a></li>
+                <li>Thirumalai Venkatesan, Velmurugan Thavasi, Jordan P. Metcalf, Donna L Tyungu, Aaron M. Wendelboe, David Ebert, Ong Weiqiang, Zhang Fuchang, Jia Zhunan (2024), "Revolutionising disease detection: The emergence of non-invasive VOC breathomics", Open Access Government January 2024, pp.74-75. doi: <a href="https://doi.org/10.56367/OAG-041-10923">10.56367/OAG-041-10923</a></li>
               </ol>
             </ion-card-content>
           </ion-card>
