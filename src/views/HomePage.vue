@@ -101,7 +101,11 @@
 
             <ion-card-content class="vcc">
               <p>
-                Description TBD
+                The transmission cycles of many pathogens interact with environmental factors, including climate, water, and land use. These relationships include direct effects on the pathogen as well as indirect effects on vectors and hosts. For example, influenza and other upper respiratory viruses are sensitive to weather conditions that influence virus persistence in the environment and host behavior and contact rates. Other infectious diseases, such as gastrointestinal pathogens and vector-borne infections, are influenced by extreme weather events such as localized flooding and heat waves. Understanding the ecological niches of hosts, vectors, and pathogens can support the prediction of potential transmission hotspots on the landscape and prioritization of resources for disease surveillance and control. Environmental reservoirs, such as water and soil, can also be directly sampled to detect the presence of pathogens.
+              </p>
+
+              <p>
+                The goal of the environmental surveillance team is to collect environmental measurements that can be integrated with data on pathogens, vectors, and hosts and develop predictive models and identify transmission hotspots for specific diseases. We have built a database of environmental variables obtained from multiple sources, including Oklahoma Mesonet ground-based weather stations, GridMET meteorological grids, and satellite Earth observations. We have also prototyped a system for watershed monitoring that involves testing river water samples for human and animal pathogens throughout Oklahoma. These data have been incorporated into the PIPP dashboard and are being used to analyze the relationships between meteorological variables and COVID-19 outbreaks.
               </p>
 
               <ion-grid>
