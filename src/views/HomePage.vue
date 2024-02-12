@@ -165,7 +165,7 @@
 
             <ion-card-content class="vcc">
               <p>
-                Description TBD
+                Human health accompanies environmental health and animal health as the three pillars of One Health. Sentinel and syndromic approaches are two design aspects to improve early detection of emerging pathogens. One of the primary challenges of these surveillance systems’ ability to detect early disease emergence is that they are rare events. To address this challenge, we have a multidisciplinary team of experts, representing data science, systems engineering, computer science, as well as health, epidemiology, and bioinformatics. Our approach is to expand the number of data sources used for disease surveillance and combine them to produce signals that can be reviewed and analyzed by both machine learning and human experts.
               </p>
 
               <ion-grid>
