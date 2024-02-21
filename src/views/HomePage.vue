@@ -133,7 +133,7 @@
 
             <ion-card-content class="vcc">
               <p>
-                Description TBD
+                The Animal Surveillance team will work with veterinarians and other entities to utilize animal/zoonotic infectious disease data as a potential indicator for human infectious disease outbreaks. This team is also working in conjunction with other project teams to improve the detection and utilization of animal/zoonotic pathogens in wastewater and environmental samples for determining or predicting potential human infectious disease outbreaks.
               </p>
 
               <ion-grid>
@@ -150,6 +150,12 @@
                   <PersonCard :person="persons.ks" />
                   <PersonCard :person="persons.ay" />
                   <PersonCard :person="persons.rz" />
+                </ion-row>
+
+                <ion-row class="ion-justify-content-center">
+                  <PersonCard :person="persons.ng" />
+                  <PersonCard :person="persons.jt" />
+                  <PersonCard :person="persons.if" />
                   <PersonCard :person="persons.wj" role='Coordination' />
                 </ion-row>
               </ion-grid>
@@ -447,6 +453,9 @@ const persons = {
   dh: {name: 'Dean Hougen', pic: 'dh.png', affiliations: ['Associate Professor', 'Lloyd & Joyce Austin Presidential Professor', 'CS Interim Director', 'School of Computer Science', 'University of Oklahoma']},
   tr: {name: 'Talayeh Razzaghi', pic: 'tr.png', affiliations: ['Assistant Professor', 'School of Industrial and Systems Engineering', 'University of Oklahoma']},
   kd: {name: 'Kara Deleon', pic: null, affiliations: null},
+  ng: {name: 'Natasha Gaudreault', pic: 'ng.jpg', affiliations: ['Research Assistant Professor', 'College of Veterinary Medicine', 'Kansas State University']},
+  jt: {name: 'Jessie Trujillo', pic: 'jt.jpg', affiliations: ['Senior Research Associate', 'College of Veterinary Medicine', 'Kansas State University']},
+  if: {name: 'Isaac Fritz', pic: 'if.jpg', affiliations: ['Research Assistant', 'College of Veterinary Medicine', 'Kansas State University']},
 };
 </script>
 
