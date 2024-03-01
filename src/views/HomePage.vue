@@ -87,7 +87,13 @@
               </a>
             </div>
 
-              <p>Description TBD</p>
+              <p>
+                The dashboard visualizes the integrated data sources in a spatio-temporal manner.
+                The user can select regions such as counties and states, explore the data, and compare them to each other.
+                The time of all charts is linked such that selecting a specific time in a chart will highlight the respective times in the other data sources.
+                The map can be animated to understand better how certain signals spread spatially over time.
+                The data sources include data from the CDC, climate, symptoms searched in Google search, and animal and human pathogens detected in river and wastewater streams. 
+              </p>
             </ion-card-content>
           </ion-card>
 
@@ -208,7 +214,7 @@
 
             <ion-card-content class="vcc">
               <p>
-                Description TBD
+                Pioneers innovative approaches for early detection and surveillance of emerging pathogens, crucial for preemptive public health responses. By harnessing breath analysis and wastewater-based epidemiology, this initiative aims to bridge the gap between traditional surveillance methods and real-time, integrated data management, enabling swift and effective action against potential pandemics. Through collaborative efforts across five specialized teams, this project endeavors to establish a national roadmap for proactive disease detection, emphasizing the vital role of technology in safeguarding public health on a global scale.
               </p>
 
               <ion-grid>
@@ -244,7 +250,7 @@
 
             <ion-card-content class="vcc">
               <p>
-                Description TBD
+                The team focuses on advancing decision-making processes and analytical frameworks across multiple scales to enhance pandemic response strategies. It integrates all data sources in a single database, checks the data for quality issues, and develops machine learning models for prediction and event detection. Furthermore, the team designs a dashboard where domain experts and model experts can explore all data. This initiative aims to provide decision-makers with timely, comprehensive insights for proactive intervention. Through a multidisciplinary approach, this project seeks to optimize resource allocation, risk assessment, and mitigation efforts, ultimately strengthening the resilience of healthcare systems and communities in the face of complex health challenges.
               </p>
 
               <ion-grid>
