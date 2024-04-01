@@ -69,6 +69,13 @@
                   <PersonCard :person="persons.mw" role='Co-PI' />
 
                 </ion-row>
+
+                <ion-row class="ion-justify-content-center">
+
+                  <PersonCard :person="persons.mk" role='Project Management' />
+                  <PersonCard :person="persons.yt" role='Financials and Administration' />
+
+                </ion-row>
               </ion-grid>
             </ion-card-content>
           </ion-card>
@@ -462,6 +469,8 @@ const persons = {
   ng: {name: 'Natasha Gaudreault', pic: 'ng.jpg', affiliations: ['Research Assistant Professor', 'College of Veterinary Medicine', 'Kansas State University']},
   jt: {name: 'Jessie Trujillo', pic: 'jt.jpg', affiliations: ['Senior Research Associate', 'College of Veterinary Medicine', 'Kansas State University']},
   if: {name: 'Isaac Fritz', pic: 'if.jpg', affiliations: ['Research Assistant', 'College of Veterinary Medicine', 'Kansas State University']},
+  mk: {name: 'Marcie King', pic: 'mk.jpg', affiliations: ['Program Manager', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
+  yt: {name: 'Yessenia Torres', pic: 'yt.png', affiliations: ['Senior Managing Director', 'Data Institute for Societal Challenges', 'University of Oklahoma']},
 };
 </script>
 
