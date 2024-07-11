@@ -296,6 +296,7 @@
                 <li>Zhunan Jia, Velmurugan Thavasi, Thirumalai Venkatesan, Pyng LeeBreath (2023), "Analysis for Lung Cancer Early Detection - A Clinical Study", Metabolites 2023, 13, 1197. doi: <a href="https://doi.org/10.3390/metabo13121197">10.3390/metabo13121197</a></li>
                 <li>Thirumalai Venkatesan, Velmurugan Thavasi, Jordan P. Metcalf, Donna L Tyungu, Aaron M. Wendelboe, David Ebert, Ong Weiqiang, Zhang Fuchang, Jia Zhunan (2024), "Revolutionising disease detection: The emergence of non-invasive VOC breathomics", Open Access Government January 2024, pp.74-75. doi: <a href="https://doi.org/10.56367/OAG-041-10923">10.56367/OAG-041-10923</a></li>
                 <li>Michael Wimberly (2024), "Meteorological data for public health surveillance", Open Access Government April 2024, pp.38-39. doi: <a href="https://doi.org/10.56367/OAG-042-10923">10.56367/OAG-042-10923</a></li>
+                <li>Zhunan Jia, Ong Weiqiang, Zhang Fuchang, Fang Du, Velmurugan Thavasi, Thirumalai Venkatesan  (2024), "A Study of 9 Common Breath VOCs in 504 Healthy Subjects Using PTR-TOF-MS", Metabolomics 2024.</li>
               </ol>
             </ion-card-content>
           </ion-card>
