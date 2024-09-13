@@ -42,6 +42,9 @@
     </ion-header>
 
     <ion-content id="main" ref="content" :fullpage="true" :scroll-events="true" v-on:ion-scroll="getScrollPos($event.detail.scrollTop)">
+
+      <h4 class="moved">We have moved! Please click here to go to our <a href="https://www.ou.edu/disc/active-projects/nsf-pipp">new website.</a></h4>
+
       <ion-card id="overview">
             <!-- <img style="width:100%;" alt="Image of VCC building with the main entrance" :src="require('@/'+t('vccimg')+'.png')" /> -->
             <ion-card-header>
@@ -369,6 +372,9 @@
 </template>
 
 <script setup lang="ts">
+
+window.location.href = 'https://www.ou.edu/disc/active-projects/nsf-pipp';
+
 import { IonGrid, IonRow, IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonContent, IonHeader, IonIcon, IonItem, IonList, IonMenu, IonPage, IonTitle, IonToolbar, menuController } from '@ionic/vue';
 import { chevronUp, menu } from 'ionicons/icons';
 import { useScreen } from 'vue-screen';
@@ -546,5 +552,11 @@ const persons = {
 ion-toolbar {
   --background: #841617;
   --color: white;
+}
+
+.moved {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 </style>
